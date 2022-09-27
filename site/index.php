@@ -22,7 +22,7 @@
             <a href="team">Vårt Team</a>
           </li>
           <li>
-            <a type="button" data-bs-toggle="modal" data-bs-target="#loginModal" href="team">Logga In</a>
+            <a type="button" data-bs-toggle="modal" data-bs-target="#loginModal" href="#">Logga In</a>
           </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -257,6 +257,9 @@
         </strong>. Alla Rättigheter Reserverade </div>
     </div>
   </footer>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
   <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -271,9 +274,6 @@
       </div>
     </div>
   </div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
-    <i class="bi bi-arrow-up-short"></i>
-  </a>
   <script src="site/assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="site/assets/vendor/aos/aos.js"></script>
   <script src="site/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

@@ -1,16 +1,6 @@
 (function() {
   "use strict";
 
-    /**
-   * Modal
-   */
-
-  var myModal = document.getElementById('myModal')
-  var myInput = document.getElementById('myInput')
-  myModal.addEventListener('shown.bs.modal', function() {
-    myInput.focus()
-  })
-
   /**
    * Selector helper function
    */
@@ -147,5 +137,15 @@
    * Initiate Pure Counter 
    */
   new PureCounter();
+
+  /**
+   * Modal
+   */
+  var myModal = document.getElementById('myModal')
+  var myInput = document.getElementById('myInput')
+  
+  myModal.addEventListener('shown.bs.modal', () => {
+      myInput.focus()
+  })
 
 })()
