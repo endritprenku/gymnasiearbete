@@ -4,7 +4,7 @@
       <div class="logo">
         <h1 class="text-light">
           <a href="index">
-            <span>Målvaktstipss</span>
+            <span>Målvaktstips</span>
           </a>
         </h1>
         <!-- Uncomment below if you prefer to use an image logo -->
