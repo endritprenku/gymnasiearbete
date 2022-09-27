@@ -31,10 +31,6 @@ class html
                         ob_end_flush();
                     }
                 }
-                else
-                {
-                    include Z . H . '/404.php';
-                }
             }
         }
     }

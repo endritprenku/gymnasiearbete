@@ -1,11 +1,4 @@
 <body>
-  <script>
-    var myModal = document.getElementById('myModal')
-    var myInput = document.getElementById('myInput')
-    myModal.addEventListener('shown.bs.modal', function() {
-      myInput.focus()
-    }),
-  </script>
   <header id="header" class="fixed-top d-flex align-items-center header-transparent">
     <div class="container d-flex justify-content-between align-items-center">
       <div class="logo">

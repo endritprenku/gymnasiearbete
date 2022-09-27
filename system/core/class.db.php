@@ -14,4 +14,3 @@ catch(PDOException $e)
     echo ("Vi kan inte ansluta till databasen!");
     die();
 }
-
