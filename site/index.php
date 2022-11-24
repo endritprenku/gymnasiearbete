@@ -266,10 +266,22 @@
         <div class="modal-header">
           <h5 class="modal-title" id="loginModalLabel">Logga in på Målvaktstips</h5>
         </div>
-        <div class="modal-body"></div>
+        <div class="modal-body">
+        <?php User::Login(); ?>
+        <form method="post">
+        <div class="form-group">
+          <label for="usr">Användarnamn:</label>
+          <input type="text" name="username" placeholder="Användarnamn" required="required" autofocus="autofocus" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Lösenord:</label>
+          <input type="password" name="password" placeholder="Lösenord" required="required" autofocus="autofocus" class="form-control">
+        </div>
+        </form>
+        </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Gå Tillbaka</button>
-          <button type="button" class="btn btn-primary">Logga In</button>
+          <button type="submit" name="login" class="btn btn-primary">Logga In</button>
         </div>
       </div>
     </div>

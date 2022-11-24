@@ -6,9 +6,12 @@
 
 	$db['host'] = '127.0.0.1'; //Mysql's Host
 	$db['port'] = '3306'; //Mysql's port
-	$db['user'] = "root"; //Mysql's user
+	$db['user'] = 'root'; //Mysql's user
 	$db['pass'] = ''; //Mysql's password
-	$db['db'] = "arc"; //Mysql's database
+	$db['db'] =   'gymnasiearbete'; //Mysql's database
 
 /******************************************** WEBSITE SETTINGS *******************************************************/
+
+	$config['hotelUrl'] = "http://localhost:8080"; //Address of your website. Does not end with a "/"
+	$config['maintenance'] = false; //Maintenance
 ?>

@@ -9,6 +9,8 @@ class html
 
     public static function page()
     {
+        global $dbh, $config;
+
         if (isset($_GET['url']))
         {
             $page = filter($_GET['url']);
@@ -20,27 +22,65 @@ class html
             }
             if ($page)
             {
-                $fileExists = Z . H . "/{$page}.php";
-                if (file_exists($fileExists))
+                if (!$config['maintenance'] == true)
                 {
-                    if (in_array($page, $allowed))
+                    $fileExists = Z . H . "/{$page}.php";
+                    if (file_exists($fileExists))
                     {
-                        ob_start("html::callback");
-                        include (Z . H . "/{$page}.php");
-                        $contents = ob_get_contents();
-                        ob_end_flush();
+                        if (in_array($page, $allowed))
+                        {
+                            ob_start("html::callback");
+                            include (Z . H . "/{$page}.php");
+                            $contents = ob_get_contents();
+                            ob_end_flush();
+                        }
+                    }
+                    else
+                    {
+                        include Z . H . '/404.php';
                     }
                 }
+                else
+                {
+                    include Z . H . '/pages/index.php';
+                }
+            }
+            else
+            {
+                include Z . H . '/pages/index.php';
+                header('Location: ' . $config['hotelUrl'] . '/index');
+            }
+        }
+
+        if (loggedIn())
+        {
+            switch ($page)
+            {
+                case "":
+                    header('Location: ' . $config['hotelUrl'] . '/index');
+                break;
+            }
+        }
+
+        if (!loggedIn())
+        {
+            switch ($page)
+            {
+                case "":
+                    header('Location: ' . $config['hotelUrl'] . '/index');
+                break;
+                default:
+                break;
             }
         }
     }
 
     public static function error($errorName)
     {
-        echo '<div class="error" style="display: block;">'.$errorName.'</div>';
+        echo '<div class="error" style="display: block;">' . $errorName . '</div>';
     }
     public static function errorSucces($succesMessage)
     {
-        echo '<div class="errorSucces" style="display: block;">'.$succesMessage.'</div>';
+        echo '<div class="errorSucces" style="display: block;">' . $succesMessage . '</div>';
     }
 }

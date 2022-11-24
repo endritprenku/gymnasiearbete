@@ -39,3 +39,14 @@ function filterInpute($data)
     $filtered_string = $filter->xss($data);
 }
 
+function loggedIn()
+{
+    if (isset($_SESSION['id']))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}

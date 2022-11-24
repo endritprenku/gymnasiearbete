@@ -46,7 +46,7 @@ class User
             {
                 if (!empty($_POST['password']))
                 {
-                    $stmt = $dbh->prepare("SELECT id, password, username FROM users WHERE username = :username");
+                    $stmt = $dbh->prepare("SELECT id, username, password FROM users WHERE username = :username");
                     $stmt->bindParam(':username', $_POST['username']);
                     $stmt->execute();
                     if ($stmt->RowCount() == 1)
@@ -55,15 +55,16 @@ class User
                         if (self::checkUser($_POST['password'], $row['password'], $row['username']))
                         {
                             $_SESSION['id'] = $row['id'];
-                            header('Location: ' . $config['hotelUrl'] . '/hem');
+                            header('Location: ' . $config['hotelUrl'] . '/tjänster');
                         }
+                        return html::error('Ditt lösenord är felaktigt.');
                     }
-                    return html::error('Ditt lösenord är felaktigt.');
+                    return html::error('Detta användarnamn finns inte.');
                 }
-                return html::error('Detta användarnamn existrerar inte.');
+                return html::error('Du månste ange ett lösenord!');
             }
-            return html::error('Du månste ange ett lösenord!');
+            return html::error('Ange ett användarnamn!');
         }
-        return html::error('Ange ett användarnamn!');
-	}
+    }
 }
+
