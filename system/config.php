@@ -8,7 +8,7 @@
 	$db['port'] = '3306'; //Mysql's port
 	$db['user'] = "root"; //Mysql's user
 	$db['pass'] = ''; //Mysql's password
-	$db['db'] = "habbo"; //Mysql's database
+	$db['db'] = "arc"; //Mysql's database
 
 /******************************************** WEBSITE SETTINGS *******************************************************/
 ?>

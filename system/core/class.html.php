@@ -34,4 +34,13 @@ class html
             }
         }
     }
+
+    public static function error($errorName)
+    {
+        echo '<div class="error" style="display: block;">'.$errorName.'</div>';
+    }
+    public static function errorSucces($succesMessage)
+    {
+        echo '<div class="errorSucces" style="display: block;">'.$succesMessage.'</div>';
+    }
 }
