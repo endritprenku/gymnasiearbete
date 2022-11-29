@@ -37,6 +37,19 @@ class User
         return password_hash($password, PASSWORD_BCRYPT);
     }
 
+    public static function userData($key)
+    {
+        global $dbh;
+        if (loggedIn())
+        {
+            $stmt = $dbh->prepare("SELECT " . $key . " FROM users WHERE id = :id");
+            $stmt->bindParam(':id', $_SESSION['id']);
+            $stmt->execute();
+            $row = $stmt->fetch();
+            return filter($row[$key]);
+        }
+    }
+
     public static function login()
     {
         global $dbh, $config;
@@ -54,8 +67,15 @@ class User
                         $row = $stmt->fetch();
                         if (self::checkUser($_POST['password'], $row['password'], $row['username']))
                         {
-                            $_SESSION['id'] = $row['id'];
-                            header('Location: ' . $config['hotelUrl'] . '/tjänster');
+                            if (!$config['maintenance'] == true)
+                            {
+                                $userUpdateIp = $dbh->prepare("UPDATE users SET last_ip = :userip WHERE id = :id");
+                                $userUpdateIp->bindParam(':id', $row['id']);
+                                $userUpdateIp->bindParam(':userip', userIp());
+                                $userUpdateIp->execute();
+                                $_SESSION['id'] = $row['id'];
+                                header('Location: ' . $config['hotelUrl'] . '/tjanster');
+                            }
                         }
                         return html::error('Ditt lösenord är felaktigt.');
                     }
@@ -67,4 +87,3 @@ class User
         }
     }
 }
-
