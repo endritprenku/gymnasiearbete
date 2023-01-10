@@ -43,40 +43,37 @@
     <section class="team" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
       <div class="container">
         <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+        <?php
+					$stmt = $dbh->prepare("SELECT * FROM employees");
+					$stmt->execute();
+					if (!$stmt->RowCount() == 0)
+					{
+						while($employees = $stmt->fetch())
+						{
+							echo'<div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member">
               <div class="member-img">
                 <img src="https://www.informatique-mania.com/wp-content/uploads/2021/04/foto-sin-rostro-de-facebook-780x470.jpg" class="img-fluid" alt="">
                 <div class="social">
-                  <a href="https://www.instagram.com/endritprenku/">
+                  <a href="https://www.instagram.com/'.filter($employees["instagram"]).'/">
                     <i class="bi bi-instagram"></i>
                   </a>
                 </div>
               </div>
               <div class="member-info">
-                <h4>Endrit Prenku</h4>
-                <span>Programmerare</span>
-                <p>Animi est delectus alias quam repellendus nihil nobis dolor. Est sapiente occaecati et dolore. Omnis aut ut nesciunt explicabo qui. Eius nam deleniti ut omnis repudiandae perferendis qui. Neque non quidem sit sed pariatur quia modi ea occaecati. Incidunt ea non est corporis in.</p>
+                <h4>'.filter($employees["full_name"]).'</h4>
+                <span>'.filter($employees["role"]).'</span>
+                <p>'.filter($employees["role_description"]).'</p>
               </div>
             </div>
-          </div>
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <div class="member-img">
-                <img src="https://www.informatique-mania.com/wp-content/uploads/2021/04/foto-sin-rostro-de-facebook-780x470.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href="https://www.instagram.com/fillepersson30/">
-                    <i class="bi bi-instagram"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Filip Persson</h4>
-                <span>Målvaktstränare</span>
-                <p>Aspernatur iste esse aliquam enim et corporis. Molestiae voluptatem aut eligendi quis aut. Libero vel amet voluptatem eos rerum non doloremque. Dolores eum non.</p>
-              </div>
-            </div>
-          </div>
+          </div>';
+						}
+					}
+					else
+					{
+						echo 'There is no employees';
+					}
+				?>
         </div>
       </div>
     </section>

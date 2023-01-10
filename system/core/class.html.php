@@ -56,7 +56,7 @@ class html
         {
             switch ($page)
             {
-                case "index":
+                case "":
                 header('Location: ' . $config['hotelUrl'] . '/tjanster');
                 break;
             }
@@ -66,9 +66,7 @@ class html
         {
             switch ($page)
             {
-                case "tjanster":
-                case "team":
-                case "404":
+                case "":
                 header('Location: ' . $config['hotelUrl'] . '/index');
                 break;
                 default:
