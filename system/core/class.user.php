@@ -74,7 +74,7 @@ class User
                                 $userUpdateIp->bindParam(':userip', userIp());
                                 $userUpdateIp->execute();
                                 $_SESSION['id'] = $row['id'];
-                                header('Location: ' . $config['hotelUrl'] . '/tjanster');
+                                header("Refresh:0");
                             }
                         }
                         return html::error('Ditt lösenord är felaktigt.');

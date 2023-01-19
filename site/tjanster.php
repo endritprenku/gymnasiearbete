@@ -21,6 +21,9 @@
           <li>
             <a href="team">Vårt Team</a>
           </li>
+          <li>
+            <a href="kategorier">Våra Kategorier</a>
+          </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
@@ -90,36 +93,6 @@
         </div>
       </div>
     </section>
-    <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="200">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 video-box">
-            <img src="https://wallpaperaccess.com/full/1176483.jpg" class="img-fluid" alt="">
-            <a href="https://www.youtube.com/watch?v=xCrfxEBHNHA&list=RDMMxCrfxEBHNHA&start_radio=1" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
-          </div>
-          <div class="col-lg-6 d-flex flex-column justify-content-center p-5">
-            <div class="icon-box">
-              <div class="icon">
-                <i class="bx bx-fingerprint"></i>
-              </div>
-              <h4 class="title">
-                <a href="">Lorem Ipsum</a>
-              </h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-            </div>
-            <div class="icon-box">
-              <div class="icon">
-                <i class="bx bx-gift"></i>
-              </div>
-              <h4 class="title">
-                <a href="">Nemo Enim</a>
-              </h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <section class="service-details">
       <div class="container">
         <div class="row">
@@ -143,7 +116,7 @@
           <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
             <div class="card">
               <div class="card-img">
-                <img src="https://bloximages.chicago2.vip.townnews.com/journalstar.com/content/tncms/site/assets/v3/editorial/b/0b/b0b3d87b-7024-5634-9560-821ed34d005b/5acebca67dde3.image.jpg?resize=1200%2C842" alt="...">
+                <img src="https://kaptivasportsacademy.com/wp-content/uploads/2018/10/goalie-ksa.jpg" alt="...">
               </div>
               <div class="card-body">
                 <h5 class="card-title">

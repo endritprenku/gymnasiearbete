@@ -699,16 +699,6 @@ section {
   border-color: #2282ff;
 }
 
-
-.why-us .video-box {
-  position: relative;
-}
-
-.why-us .video-box img {
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
 .why-us .play-btn {
   width: 94px;
   height: 94px;
@@ -1224,4 +1214,38 @@ section {
 
 #footer .credits a {
   color: #a2cce3;
+}
+
+#category .get-started-btn {
+  background: #1e4356;
+  display: inline-block;
+  padding: 6px 30px;
+  border-radius: 20px;
+  color: #fff;
+  transition: none;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  transition: 0.3s;
+}
+
+#category .get-started-btn:hover {
+  background: #68A4C4;
+}
+
+#category .get-started-btn {
+  background: #68A4C4;
+}
+
+#category .get-started-btn:hover {
+  background: #85b6cf;
+}
+
+#category .card-img-tiles .main-img>img {
+  display: block;
+  width: 100%
+}
+
+#category .mb-grid-gutter {
+  margin-bottom: 30px !important;
 }

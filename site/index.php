@@ -21,10 +21,21 @@
           <li>
             <a href="team">Vårt Team</a>
           </li>
-          <!--
           <li>
-            <a type="button" data-bs-toggle="modal" data-bs-target="#loginModal" href="#">Logga In</a>
-          </li>-->
+            <a href="kategorier">Våra Kategorier</a>
+          </li>
+          <?php
+          if (isset($_SESSION['id']))
+          {
+              echo '<li>
+                      <a href="kategorier">Logga Ut</a>
+                    </li>';
+          } else {
+              echo '<li>
+                      <a type="button" data-bs-toggle="modal" data-bs-target="#loginModal" href="#">Logga In</a>
+                    </li>';
+          }
+				?>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
@@ -105,36 +116,6 @@
                 <a href="">Nemo Enim</a>
               </h4>
               <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="200">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 video-box">
-            <img src="https://wallpaperaccess.com/full/1176483.jpg" class="img-fluid" alt="">
-            <a href="https://www.youtube.com/watch?v=xCrfxEBHNHA&list=RDMMxCrfxEBHNHA&start_radio=1" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
-          </div>
-          <div class="col-lg-6 d-flex flex-column justify-content-center p-5">
-            <div class="icon-box">
-              <div class="icon">
-                <i class="bx bx-fingerprint"></i>
-              </div>
-              <h4 class="title">
-                <a href="">Lorem Ipsum</a>
-              </h4>
-              <p class="description">Volup</p>
-            </div>
-            <div class="icon-box">
-              <div class="icon">
-                <i class="bx bx-gift"></i>
-              </div>
-              <h4 class="title">
-                <a href="">Nemo Enim</a>
-              </h4>
-              <p class="description">At vero eos et accusamus et iustwo odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
             </div>
           </div>
         </div>
