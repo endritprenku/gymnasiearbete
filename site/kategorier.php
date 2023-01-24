@@ -21,9 +21,21 @@
           <li>
             <a href="team">Vårt Team</a>
           </li>
-          <li>
-            <a class="active" href="kategorier">Våra Kategorier</a>
-          </li>
+          <?php
+          if (isset($_SESSION['id']))
+          {
+              echo '<li class="dropdown"><a href="">Mitt Konto</a>
+              <ul>
+                <li><a href="kategorier">Våra Kategorier</a></li>
+                <li><a href="loggaut">Logga Ut</a></li>
+              </ul>
+            </li>';
+          } else {
+              echo '<li>
+              <a type="button" data-bs-toggle="modal" data-bs-target="#loginModal" href="#">Logga In</a>
+            </li>';
+          }
+				?>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
@@ -136,7 +148,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-body">
-          <iframe width="460" height="315" src="<?= $categorie["video"] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="466" height="315" src="<?= $categorie["video"] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Stäng</button>

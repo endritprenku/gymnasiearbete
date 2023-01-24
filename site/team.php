@@ -21,9 +21,21 @@
           <li>
             <a class="active" href="team">Vårt Team</a>
           </li>
-          <li>
-            <a href="kategorier">Våra Kategorier</a>
-          </li>
+          <?php
+          if (isset($_SESSION['id']))
+          {
+              echo '<li class="dropdown"><a href="">Mitt Konto</a>
+              <ul>
+                <li><a href="kategorier">Våra Kategorier</a></li>
+                <li><a href="loggaut">Logga Ut</a></li>
+              </ul>
+            </li>';
+          } else {
+              echo '<li>
+              <a type="button" data-bs-toggle="modal" data-bs-target="#loginModal" href="#">Logga In</a>
+            </li>';
+          }
+				?>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>

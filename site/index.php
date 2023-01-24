@@ -21,19 +21,19 @@
           <li>
             <a href="team">Vårt Team</a>
           </li>
-          <li>
-            <a href="kategorier">Våra Kategorier</a>
-          </li>
           <?php
           if (isset($_SESSION['id']))
           {
-              echo '<li>
-                      <a href="kategorier">Logga Ut</a>
-                    </li>';
+              echo '<li class="dropdown"><a href="">Mitt Konto</a>
+              <ul>
+                <li><a href="kategorier">Våra Kategorier</a></li>
+                <li><a href="loggaut">Logga Ut</a></li>
+              </ul>
+            </li>';
           } else {
               echo '<li>
-                      <a type="button" data-bs-toggle="modal" data-bs-target="#loginModal" href="#">Logga In</a>
-                    </li>';
+              <a type="button" data-bs-toggle="modal" data-bs-target="#loginModal" href="#">Logga In</a>
+            </li>';
           }
 				?>
         </ul>
@@ -45,21 +45,21 @@
     <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
       <div class="carousel-item active">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Filip <span>Filip</span>
+          <h2 class="animate__animated animate__fadeInDown">Varför oss?</span>
           </h2>
-          <p class="animate__animated animate__fadeInUp">Filip FilipFilip Filip Filip Filip Filip FilipFilip Filip Filip Filip Filip Filip.</p>
+          <p class="animate__animated animate__fadeInUp">Få professionell målvaktsträning från erfarna tränare med en proven track record.</p>
         </div>
       </div>
       <div class="carousel-item">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Endrit</h2>
-          <p class="animate__animated animate__fadeInUp">EndritEndritEndritEndritEndritEndritEndritEndritEndritEndritEndritEndritEndritEndritEndritEndritEndritEndritEndrit</p>
+          <h2 class="animate__animated animate__fadeInDown">Varför oss?</h2>
+          <p class="animate__animated animate__fadeInUp">Bli en elite-målvakt med vår specialiserade träning och personliga coaching.</p>
         </div>
       </div>
       <div class="carousel-item">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">FilipFilipFilipFilip</h2>
-          <p class="animate__animated animate__fadeInUp">FilipFilipFilipFilipFilipFilipFilipFilipFilipFilipFilipFilipFilipFilipFilipFilipFilip.</p>
+          <h2 class="animate__animated animate__fadeInDown">Varför oss?</h2>
+          <p class="animate__animated animate__fadeInUp">Ta ditt spel till nästa nivå med vår avancerade taktiska utbildning och videoanalys.</p>
         </div>
       </div>
       <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
@@ -77,12 +77,12 @@
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
             <div class="icon-box icon-box-pink">
               <div class="icon">
-                <i class="bx bxl-dribbble"></i>
+                <i class="bx bxl-cash"></i>
               </div>
               <h4 class="title">
-                <a href="">Lorem Ipsum</a>
+                <a href="">Låga konstnader</a>
               </h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+              <p class="description">Vår tjänst är billig eftersom vi har valt att använda tekniska lösningar som gör det möjligt för oss att hålla våra kostnader låga. Vi har också valt att inte ha några onödiga kostnader, såsom dyra kontorslokaler eller höga personalrelaterade kostnader. Vi har också valt att erbjuda vår tjänst online, vilket gör det möjligt för oss att nå en bredare publik utan de kostnader som är förknippade med att ha en fysisk plats. Detta gör det möjligt för oss att erbjuda vår tjänst till ett mycket konkurrenskraftigt pris.</p>
             </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
@@ -91,9 +91,9 @@
                 <i class="bx bx-file"></i>
               </div>
               <h4 class="title">
-                <a href="">Sed ut perspiciatis</a>
+                <a href="">Effektivt</a>
               </h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+              <p class="description">Vår målvaktsträning är effektiv på flera sätt. För det första har våra tränare bred erfarenhet och kunskap om positionen, vilket innebär att de kan ge professionell och specifik träning för målvakter på alla nivåer. Dessutom har de en proven track record med att hjälpa spelare att utvecklas och nå sina mål.</p>
             </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
@@ -102,9 +102,9 @@
                 <i class="bx bx-tachometer"></i>
               </div>
               <h4 class="title">
-                <a href="">Magni Dolores</a>
+                <a href="">24/7</a>
               </h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+              <p class="description">Vår tjänst är tillgänglig dygnet runt, alla dagar i veckan. Det betyder att du kan använda den när som helst, sju dagar i veckan, dygnet runt, utan avbrott eller begränsningar.</p>
             </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
@@ -113,9 +113,9 @@
                 <i class="bx bx-world"></i>
               </div>
               <h4 class="title">
-                <a href="">Nemo Enim</a>
+                <a href="">Målvaktsträning</a>
               </h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+              <p class="description">Vår tjänst är speciellt anpassad för att möta behoven hos målvakter i alla nivåer. Det innebär att det är ett utmärkt verktyg för både nybörjare och erfarna målvakter som vill förbättra sin prestation. Tjänsten innehåller träningsmaterial, videor med professionella målvakter, personliga råd och möjlighet att få feedback på ens prestationer. Den är utvecklad tillsammans med professionella målvakter och tränare för att erbjuda den bästa möjliga supporten för målvakter.</p>
             </div>
           </div>
         </div>
