@@ -2,13 +2,7 @@
   <header id="header" class="fixed-top d-flex align-items-center ">
     <div class="container d-flex justify-content-between align-items-center">
       <div class="logo">
-        <h1 class="text-light">
-          <a href="index">
-            <span>Målvaktstips</span>
-          </a>
-        </h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index"><img src="site/assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        <a href="index"><img src="site/assets/img/logo.png" alt="" class="img-fluid"></a>
       </div>
       <nav id="navbar" class="navbar">
         <ul>
@@ -24,7 +18,7 @@
           <?php
           if (isset($_SESSION['id']))
           {
-              echo '<li class="dropdown"><a href="">Mitt Konto</a>
+              echo '<li class="dropdown"><a href="#">Mitt Konto</a>
               <ul>
                 <li><a href="kategorier">Våra Kategorier</a></li>
                 <li><a href="loggaut">Logga Ut</a></li>
@@ -118,8 +112,8 @@
             </p>
           </div>
           <div class="col-lg-3 col-md-6 footer-info">
-            <h3>Om Målvaktstips</h3>
-            <p>Vi på Målvaktstips är ett företag som lär ut ungdomar att bli deras bästa version av sig själva framför mmålet.</p>
+            <h3>Om Goalie</h3>
+            <p>Vi på Goalie är ett företag som lär ut ungdomar att bli deras bästa version av sig själva framför mmålet.</p>
             <div class="social-links mt-3">
               <a href="#" class="instagram">
                 <i class="bx bxl-instagram"></i>
@@ -131,7 +125,7 @@
     </div>
     <div class="container">
       <div class="copyright"> &copy; Copyright <strong>
-          <span>Målvaktstips</span>
+          <span>Goalie</span>
         </strong>. Alla Rättigheter Reserverade </div>
     </div>
   </footer>

@@ -2,13 +2,7 @@
   <header id="header" class="fixed-top d-flex align-items-center ">
     <div class="container d-flex justify-content-between align-items-center">
       <div class="logo">
-        <h1 class="text-light">
-          <a href="index">
-            <span>Målvaktstips</span>
-          </a>
-        </h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index"><img src="site/assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        <a href="index"><img src="site/assets/img/logo.png" alt="" class="img-fluid"></a>
       </div>
       <nav id="navbar" class="navbar">
         <ul>
@@ -24,7 +18,7 @@
           <?php
           if (isset($_SESSION['id']))
           {
-              echo '<li class="dropdown"><a href="">Mitt Konto</a>
+              echo '<li class="dropdown"><a href="#">Mitt Konto</a>
               <ul>
                 <li><a href="kategorier">Våra Kategorier</a></li>
                 <li><a href="loggaut">Logga Ut</a></li>
@@ -57,49 +51,49 @@
     </section>
     <section class="services">
       <div class="container">
-        <div class="row">
+      <div class="row">
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
             <div class="icon-box icon-box-pink">
               <div class="icon">
-                <i class="bx bxl-dribbble"></i>
+                <i class="bx bx-money"></i>
               </div>
               <h4 class="title">
-                <a href="">Lorem Ipsum</a>
+                <a href="">Låga konstnader</a>
               </h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+              <p class="description">Vår tjänst är billig eftersom vi har valt att använda tekniska lösningar som gör det möjligt för oss att hålla våra kostnader låga. Vi har också valt att inte ha några onödiga kostnader, såsom dyra kontorslokaler eller höga personalrelaterade kostnader. Vi har också valt att erbjuda vår tjänst online, vilket gör det möjligt för oss att nå en bredare publik utan de kostnader som är förknippade med att ha en fysisk plats. Detta gör det möjligt för oss att erbjuda vår tjänst till ett mycket konkurrenskraftigt pris.</p>
             </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
             <div class="icon-box icon-box-cyan">
               <div class="icon">
-                <i class="bx bx-file"></i>
+                <i class="bx bx-tachometer"></i>
               </div>
               <h4 class="title">
-                <a href="">Sed ut perspiciatis</a>
+                <a href="">Effektivt</a>
               </h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+              <p class="description">Vår målvaktsträning är effektiv på flera sätt. För det första har våra tränare bred erfarenhet och kunskap om positionen, vilket innebär att de kan ge professionell och specifik träning för målvakter på alla nivåer. Dessutom har de en proven track record med att hjälpa spelare att utvecklas och nå sina mål.</p>
             </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="icon-box icon-box-green">
               <div class="icon">
-                <i class="bx bx-tachometer"></i>
+                <i class="bx bx-time"></i>
               </div>
               <h4 class="title">
-                <a href="">Magni Dolores</a>
+                <a href="">24/7</a>
               </h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+              <p class="description">Vår tjänst är tillgänglig dygnet runt, alla dagar i veckan. Det betyder att du kan använda den när som helst, sju dagar i veckan, dygnet runt, utan avbrott eller begränsningar.</p>
             </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="icon-box icon-box-blue">
               <div class="icon">
-                <i class="bx bx-world"></i>
+                <i class="bx bx-football"></i>
               </div>
               <h4 class="title">
-                <a href="">Nemo Enim</a>
+                <a href="">Målvaktsträning</a>
               </h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+              <p class="description">Vår tjänst är speciellt anpassad för att möta behoven hos målvakter i alla nivåer. Det innebär att det är ett utmärkt verktyg för både nybörjare och erfarna målvakter som vill förbättra sin prestation. Tjänsten innehåller träningsmaterial, videor med professionella målvakter, personliga råd och möjlighet att få feedback på ens prestationer. Den är utvecklad tillsammans med professionella målvakter och tränare för att erbjuda den bästa möjliga supporten för målvakter.</p>
             </div>
           </div>
         </div>
@@ -296,8 +290,8 @@
             </p>
           </div>
           <div class="col-lg-3 col-md-6 footer-info">
-            <h3>Om Målvaktstips</h3>
-            <p>Vi på Målvaktstips är ett företag som lär ut ungdomar att bli deras bästa version av sig själva framför målet.</p>
+            <h3>Om Goalie</h3>
+            <p>Vi på Goalie är ett företag som lär ut ungdomar att bli deras bästa version av sig själva framför målet.</p>
             <div class="social-links mt-3">
               <a href="#" class="instagram">
                 <i class="bx bxl-instagram"></i>
@@ -309,7 +303,7 @@
     </div>
     <div class="container">
       <div class="copyright"> &copy; Copyright <strong>
-          <span>Målvaktstips</span>
+          <span>Goalie</span>
         </strong>. Alla Rättigheter Reserverade </div>
     </div>
   </footer>
