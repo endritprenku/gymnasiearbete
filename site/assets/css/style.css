@@ -993,6 +993,65 @@ section {
     margin: 0 auto 30px auto;
   }
 }
+ 
+.modal .modal-header {
+  background-color: #1e4356; 
+  padding: 16px 16px;
+  color: #f3f8fa;
+  border-bottom: 2px dashed #1e4356;
+  border: 0.1px solid #fff;
+}
+
+.modal input { 
+  margin-bottom: 24px; 
+}
+
+.modal .modal-body {
+  padding-top: 20px !important;
+  margin: 0 10px;
+}
+
+.modal .form-control {
+  border-radius: 0px !important;
+  border: 0px;
+  border-bottom: 1.3px solid #1e4356;
+}
+
+.modal .login-btn {
+  background: #1e4356;
+  display: inline-block;
+  padding: 6px 30px;
+  border-radius: 20px;
+  color: #fff;
+  transition: none;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  transition: 0.3s;
+  border: none;
+}
+
+.modal .login-btn:hover {
+  background: #68A4C4;
+}
+
+.modal .cancel-btn {
+  background: #dc3545;
+  display: inline-block;
+  padding: 6px 30px;
+  border-radius: 20px;
+  color: #fff;
+  transition: none;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  transition: 0.3s;
+  border: none;
+}
+
+.modal .cancel-btn:hover {
+  background: #bb2d3b;
+}
 
 .team {
   background: #fff;
@@ -1200,6 +1259,10 @@ section {
   color: #a2cce3;
 }
 
+#category .card {
+  box-shadow: 0px 0px 30px rgba(73, 78, 92, 0.15);
+}
+
 #category .get-started-btn {
   background: #1e4356;
   display: inline-block;
@@ -1215,14 +1278,6 @@ section {
 
 #category .get-started-btn:hover {
   background: #68A4C4;
-}
-
-#category .get-started-btn {
-  background: #68A4C4;
-}
-
-#category .get-started-btn:hover {
-  background: #85b6cf;
 }
 
 #category .card-img-tiles .main-img>img {

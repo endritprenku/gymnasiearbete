@@ -77,61 +77,14 @@
       </div>
     </section>
   </main>
-  <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
-    <div class="footer-newsletter">
-      <div class="container">
-        <div class="row"></div>
-      </div>
-    </div>
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Användbara Länkar</h4>
-            <ul>
-              <li>
-                <i class="bx bx-chevron-right"></i>
-                <a href="index">Hem</a>
-              </li>
-              <li>
-                <i class="bx bx-chevron-right"></i>
-                <a href="tjanster">Våra Tjänster</a>
-              </li>
-              <li>
-                <i class="bx bx-chevron-right"></i>
-                <a href="team">Våra Kategorier</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>Kontakta Oss</h4>
-            <p> Ölmbrovägen 7 <br> Örebro, 71840 <br> Sverige <br>
-              <br>
-              <strong>Telefonnummer:</strong> +46 73 085 93 29 <br>
-              <strong>Email:</strong> prenkuendrit@gmail.com <br>
-            </p>
-          </div>
-          <div class="col-lg-3 col-md-6 footer-info">
-            <h3>Om Goalie</h3>
-            <p>Vi på Goalie är ett företag som lär ut ungdomar att bli deras bästa version av sig själva framför mmålet.</p>
-            <div class="social-links mt-3">
-              <a href="#" class="instagram">
-                <i class="bx bxl-instagram"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="copyright"> &copy; Copyright <strong>
-          <span>Goalie</span>
-        </strong>. Alla Rättigheter Reserverade </div>
-    </div>
-  </footer>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
-    <i class="bi bi-arrow-up-short"></i>
-  </a> <?php 
+  <?php
+  $pages = array('includes/footer.php', 'includes/backtotop.php', 'includes/modal.php');
+    foreach ($pages as $page) {
+      include_once $page;
+    }
+	?>
+  
+  <?php 
   $categories = $dbh->prepare("SELECT * FROM categories");
   $categories->execute();
   $index = 0;
@@ -139,15 +92,21 @@
       while ($categorie = $categories->fetch()) {
           $index = $index + 1; ?> 
   <div class="modal fade" id="video-<?= $index ?>" tabindex="-1" aria-labelledby="videoLabel" aria-hidden="true">
-    <div class="modal-dialog">
+  <div class="modal-dialog">
+    <?php User::Login(); ?>
+     <form method="post">
       <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Logga in på Goalie</h5>
+        </div>
         <div class="modal-body">
-          <iframe width="466" height="315" src="<?= $categorie["video"] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe style="width: 466px; height: 315px;" src="<?= $categorie["video"] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Stäng</button>
+          <button type="button" class="cancel-btn" data-bs-dismiss="modal">GÅ TILLBAKA</button>
         </div>
       </div>
+    </form>
     </div>
   </div> 
   <?php } } else { echo "<p style='margin-left:10px;'>Det finns inga värden här!</p>"; } ?>
