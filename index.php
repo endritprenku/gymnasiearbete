@@ -22,6 +22,7 @@
 	  <link href="site/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 	  <link href="site/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 	  <link href="site/assets/css/style.css" rel="stylesheet">
+	  <link href="site/assets/css/toastify.css" rel="stylesheet">
 	</head>';
 	html::page();	
 ?>

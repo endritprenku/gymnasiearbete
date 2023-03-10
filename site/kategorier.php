@@ -61,7 +61,7 @@
             <div class="card border-0 mb-grid-gutter">
               <a class="card-img-tiles">
                 <div class="main-img">
-                  <img src="https://www.bootdey.com/image/340x326/FF8C00/000000">
+                  <img src="<?= $categorie["image"] ?>">
                 </div>
               </a>
               <div class="card-body border mt-n1 py-4 text-center">
@@ -97,10 +97,10 @@
      <form method="post">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="loginModalLabel">Logga in på Goalie</h5>
+          <h5 class="modal-title" id="loginModalLabel"><?= $categorie["title"] ?></h5>
         </div>
-        <div class="modal-body">
-          <iframe style="width: 466px; height: 315px;" src="<?= $categorie["video"] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div style="margin:0" class="modal-body">
+          <iframe style="border-radius: 5px;" width="466" height="315" src="<?= $categorie["video"] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div class="modal-footer">
           <button type="button" class="cancel-btn" data-bs-dismiss="modal">GÅ TILLBAKA</button>
@@ -109,15 +109,9 @@
     </form>
     </div>
   </div> 
-  <?php } } else { echo "<p style='margin-left:10px;'>Det finns inga värden här!</p>"; } ?>
-  <script src="site/assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="site/assets/vendor/aos/aos.js"></script>
-  <script src="site/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="site/assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="site/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="site/assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="site/assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="site/assets/vendor/php-email-form/validate.js"></script>
-  <script src="site/assets/js/main.js"></script>
+  <?php } } ?>
+  <?php
+		include_once 'includes/javascriptlinks.php';
+	?>
 </body>
 </html>

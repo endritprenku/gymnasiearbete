@@ -77,13 +77,13 @@ class User
                                 header("Refresh:0");
                             }
                         }
-                        return html::error('Ditt lösenord är felaktigt.');
+                        return html::errorMessage('Ditt lösenord är felaktigt');
                     }
-                    return html::error('Detta användarnamn finns inte.');
+                    return html::errorMessage('Detta användarnamn finns inte');
                 }
-                return html::error('Du månste ange ett lösenord!');
+                return html::errorMessage('Du månste ange ett lösenord');
             }
-            return html::error('Ange ett användarnamn!');
+            return html::errorMessage('Ange ett användarnamn');
         }
     }
 }

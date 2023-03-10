@@ -75,12 +75,13 @@ class html
         }
     }
 
-    public static function error($errorName)
+    public static function errorMessage($message)
     {
-        echo '<div class="error" style="display: block;">' . $errorName . '</div>';
+        echo '<script>window.onload = function() { errorMessage("' . $message . '"); };</script>';
     }
-    public static function errorSucces($succesMessage)
+
+    public static function successMessage($message)
     {
-        echo '<div class="errorSucces" style="display: block;">' . $succesMessage . '</div>';
+        echo '<script>window.onload = function() { successMessage("' . $message . '"); };</script>';
     }
 }
