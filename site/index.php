@@ -21,7 +21,7 @@
               echo '<li class="dropdown"><a href="#">Mitt Konto</a>
               <ul>
                 <li><a href="kategorier">Våra Kategorier</a></li>
-                <li><a href="loggaut">Logga Ut</a></li>
+                <li><a type="button" data-bs-toggle="modal" data-bs-target="#logoutModal" href="#">Logga Ut</a></li>
               </ul>
             </li>';
           } else {
@@ -39,20 +39,20 @@
     <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
       <div class="carousel-item active">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Varför oss?</span>
+          <h2 class="animate__animated animate__fadeInDown">Målvaktsträning</span>
           </h2>
           <p class="animate__animated animate__fadeInUp">Få professionell målvaktsträning från erfarna tränare med en proven track record.</p>
         </div>
       </div>
       <div class="carousel-item">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Varför oss?</h2>
+          <h2 class="animate__animated animate__fadeInDown">Elite-målvakt</h2>
           <p class="animate__animated animate__fadeInUp">Bli en elite-målvakt med vår specialiserade träning och personliga coaching.</p>
         </div>
       </div>
       <div class="carousel-item">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Varför oss?</h2>
+          <h2 class="animate__animated animate__fadeInDown">Avancerad</h2>
           <p class="animate__animated animate__fadeInUp">Ta ditt spel till nästa nivå med vår avancerade taktiska utbildning och videoanalys.</p>
         </div>
       </div>
@@ -127,15 +127,7 @@
           </div>
           <div class="col-md-7 pt-4">
             <h3>Effektiv Träning</h3>
-            <p class="fst-italic"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-            <ul>
-              <li>
-                <i class="bi bi-two"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </li>
-              <li>
-                <i class="bi bi-check"></i> Duis aute irure dolor in reprehenderit in voluptate velit.
-              </li>
-            </ul>
+            <p>Effektiv träning inom målvaktsträning är en träningsmetod som är anpassad och fokuserad på att förbättra de specifika färdigheterna, taktiska förmågerna, fysiska konditionen och mentala styrkan som krävs för att vara en framgångsrik målvakt. Träningen bör vara balanserad och variera mellan olika övningar som utmanar målvaktens styrkor och svagheter samtidigt som de utvecklar deras övergripande förmågor. Genom att träna på ett effektivt sätt kan målvakten utveckla sin prestation och nå sin fulla potential.</p>
           </div>
         </div>
         <div class="row" data-aos="fade-up">
@@ -144,15 +136,14 @@
           </div>
           <div class="col-md-7 pt-5 order-2 order-md-1">
             <h3>Lärorik Träning</h3>
-            <p class="fst-italic"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-            <p> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum </p>
+            <p> Lärorik målvaktsträning är en träningsmetod som syftar till att utbilda och utveckla målvakten genom att förmedla kunskap och erfarenhet. Träningen är inriktad på att lära ut tekniker, taktik, fysisk kondition och mentala strategier som kan tillämpas på planen. Genom att lära sig nya färdigheter och koncept kan målvakten förbättra sin prestation och ta sitt spel till nästa nivå.</p>
           </div>
         </div>
       </div>
     </section>
   </main>
   <?php
-  $pages = array('includes/footer.php', 'includes/backtotop.php', 'includes/modal.php', 'includes/javascriptlinks.php');
+  $pages = array('includes/footer.php', 'includes/backtotop.php', 'includes/modal.php', 'includes/logout.php', 'includes/javascriptlinks.php');
     foreach ($pages as $page) {
       include_once $page;
     }

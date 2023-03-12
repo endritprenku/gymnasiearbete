@@ -48,7 +48,7 @@ function loggedIn()
     else
     {
         return false;
-    }
+    }		
 }
 
 function userIp()

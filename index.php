@@ -21,6 +21,7 @@
 	  <link href="site/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
 	  <link href="site/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 	  <link href="site/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	  <link href="site/assets/css/style.css" rel="stylesheet">
 	  <link href="site/assets/css/toastify.css" rel="stylesheet">
 	</head>';

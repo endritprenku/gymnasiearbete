@@ -52,11 +52,11 @@ class html
             }
         }
 
-        if (loggedIn())
+        /*if (loggedIn())
         {
             switch ($page)
             {
-                case "":
+                case "index":
                 header('Location: ' . $config['hotelUrl'] . '/tjanster');
                 break;
             }
@@ -66,13 +66,13 @@ class html
         {
             switch ($page)
             {
-                case "":
+                case "kategorier":
                 header('Location: ' . $config['hotelUrl'] . '/index');
                 break;
                 default:
                 break;
             }
-        }
+        }*/
     }
 
     public static function errorMessage($message)

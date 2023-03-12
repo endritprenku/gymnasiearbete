@@ -12,6 +12,6 @@
 
 /******************************************** WEBSITE SETTINGS *******************************************************/
 
-	$config['hotelUrl'] = "http://localhost:8080"; //Address of your website. Does not end with a "/"
+	$config['url'] = "http://localhost:8080"; //Address of your website. Does not end with a "/"
 	$config['maintenance'] = false; //Maintenance
 ?>

@@ -18,10 +18,10 @@
           <?php
           if (isset($_SESSION['id']))
           {
-              echo '<li class="dropdown"><a href="#">Mitt Konto</a>
+              echo '<li class="dropdown"><a href="#" class="active">Mitt Konto</a>
               <ul>
                 <li><a href="kategorier">Våra Kategorier</a></li>
-                <li><a href="loggaut">Logga Ut</a></li>
+                <li><a type="button" data-bs-toggle="modal" data-bs-target="#logoutModal" href="#">Logga Ut</a></li>
               </ul>
             </li>';
           } else {
@@ -39,7 +39,7 @@
     <section class="breadcrumbs">
       <div class="container">
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Våra Kategorier</h2>
+          <h2>Våra Kategorier <i class="fa fa-folder" aria-hidden="true"></i></h2>
           <ol>
             <li>
               <a href="index">Hem</a>
@@ -68,7 +68,7 @@
                 <h2 class="h5 mb-1">Målvakt</h2>
                 <span class="d-block mb-3 font-size-xs text-muted"><?= $categorie["title"] ?></span>
                 </span>
-                <a type="button" data-bs-toggle="modal" data-bs-target="#video-<?= $index ?>" href="#" class="get-started-btn">KOLLA VIDEO</a>
+                <a type="button" onclick="displayIframe<?= $index ?>()" data-bs-toggle="modal" data-bs-target="#video-<?= $index ?>" href="#" class="get-started-btn">KOLLA VIDEO</a>
               </div>
             </div>
           </div> 
@@ -78,7 +78,7 @@
     </section>
   </main>
   <?php
-  $pages = array('includes/footer.php', 'includes/backtotop.php', 'includes/modal.php');
+  $pages = array('includes/footer.php', 'includes/backtotop.php', 'includes/modal.php', 'includes/logout.php');
     foreach ($pages as $page) {
       include_once $page;
     }
@@ -97,18 +97,21 @@
      <form method="post">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="loginModalLabel"><?= $categorie["title"] ?></h5>
+          <h5 class="modal-title" id="loginModalLabel"><?= $categorie["title"] ?> <i class="fa fa-video-camera" aria-hidden="true"></i></h5>
         </div>
-        <div style="margin:0" class="modal-body">
-          <iframe style="border-radius: 5px;" width="466" height="315" src="<?= $categorie["video"] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+        <div style="margin:0" id="modal-body<?= $index ?>" class="modal-body"></div>
         <div class="modal-footer">
           <button type="button" class="cancel-btn" data-bs-dismiss="modal">GÅ TILLBAKA</button>
         </div>
       </div>
     </form>
     </div>
-  </div> 
+  </div>
+  <script>
+    function displayIframe<?= $index ?>() {
+        document.getElementById("modal-body<?= $index ?>").innerHTML = '<iframe style="border-radius: 5px;" width="466" height="315" src="<?= $categorie["video"] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    }
+  </script>
   <?php } } ?>
   <?php
 		include_once 'includes/javascriptlinks.php';

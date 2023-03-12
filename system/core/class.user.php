@@ -74,7 +74,8 @@ class User
                                 $userUpdateIp->bindParam(':userip', userIp());
                                 $userUpdateIp->execute();
                                 $_SESSION['id'] = $row['id'];
-                                header("Refresh:0");
+                                echo "<script>setTimeout(function() { window.location.href = '".$config['url']."/kategorier'; }, 3000);</script>";
+                                return html::successMessage('Du har loggat in och kommer omredigeras om 3 sekunder');
                             }
                         }
                         return html::errorMessage('Ditt lösenord är felaktigt');

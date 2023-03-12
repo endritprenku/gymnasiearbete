@@ -21,7 +21,7 @@
               echo '<li class="dropdown"><a href="#">Mitt Konto</a>
               <ul>
                 <li><a href="kategorier">Våra Kategorier</a></li>
-                <li><a href="loggaut">Logga Ut</a></li>
+                <li><a type="button" data-bs-toggle="modal" data-bs-target="#logoutModal" href="#">Logga Ut</a></li>
               </ul>
             </li>';
           } else {
@@ -39,7 +39,7 @@
     <section class="breadcrumbs">
       <div class="container">
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Våra Tjänster</h2>
+          <h2>Våra Tjänster <i class="fa fa-shopping-cart" aria-hidden="true"></i></h2>
           <ol>
             <li>
               <a href="index">Hem</a>
@@ -111,7 +111,7 @@
                 <h5 class="card-title">
                   <a href="#">Vårt Uppdrag</a>
                 </h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                <p class="card-text">Vårt uppdrag är att utbilda och utveckla målvakterna på vårt lag. Detta inkluderar att förbättra deras tekniska färdigheter, taktiska förståelse, fysiska kondition och mentala styrka. Vi jobbar för att hjälpa målvakterna att förbättra sina prestationer och spela på sin högsta nivå möjligt. Vårt mål är att stärka deras förtroende och självkänsla och att hjälpa dem att bli en stark och pålitlig del av laget.</p>
                 <div class="read-more">
                   <a href="#">
                     <i class="bi bi-arrow-right"></i> Läs Mer </a>
@@ -122,13 +122,13 @@
           <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
             <div class="card">
               <div class="card-img">
-                <img src="https://kaptivasportsacademy.com/wp-content/uploads/2018/10/goalie-ksa.jpg" alt="...">
+                <img src="https://www.gp.se/image/policy:1.88666414:1674922611/4hB7txsV_XrWXg3KDCYGj2Lkta4.jpg?f=Regular&w=960&$p$f$w=783ee96" alt="...">
               </div>
               <div class="card-body">
                 <h5 class="card-title">
                   <a href="#">Vår Plan</a>
                 </h5>
-                <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
+                <p class="card-text">Vår plan som målvaktstränare är att genomföra en omfattande och anpassningsbar träningsplan för varje målvakt på laget. Planen kommer att inkludera övningar som fokuserar på att förbättra deras tekniska färdigheter, taktiska förståelse, fysiska kondition och mentala styrka. Vi kommer också att fokusera på individuell coaching för att identifiera och förbättra varje målvakts unika styrkor och svagheter. Vi kommer att hålla regelbundna möten med varje målvakt för att följa upp deras framsteg och justera träningsplanen efter deras behov. Vår plan är att skapa en miljö där målvakterna kan utvecklas och förbättra sig kontinuerligt för att uppnå sitt fulla potential och hjälpa laget att nå sina mål.</p>
                 <div class="read-more">
                   <a href="#">
                     <i class="bi bi-arrow-right"></i> Läs Mer </a>
@@ -145,7 +145,7 @@
                 <h5 class="card-title">
                   <a href="#">Vår Vision</a>
                 </h5>
-                <p class="card-text">Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet</p>
+                <p class="card-text">Vår vision som målvaktstränare är att skapa en kultur där varje målvakt på laget har potentialen att bli en av de bästa i sin liga. Vi strävar efter att utveckla varje målvakt individuellt, genom att fokusera på deras unika styrkor och utmaningar. Vi vill att varje målvakt ska ha självförtroende, ha höga förväntningar på sig själva och lita på sin förmåga att prestera på högsta nivå. Vår vision är att ha ett målvaktslag som är en stark och pålitlig del av hela laget och som kan spela på högsta nivå och nå de högsta framgångarna tillsammans.</p>
                 <div class="read-more">
                   <a href="#">
                     <i class="bi bi-arrow-right"></i> Läs Mer </a>
@@ -162,7 +162,7 @@
                 <h5 class="card-title">
                   <a href="#">Vår Empati</a>
                 </h5>
-                <p class="card-text">Nostrum eum sed et autem dolorum perspiciatis. Magni porro quisquam laudantium voluptatem. In molestiae earum ab sit esse voluptatem. Eos ipsam cumque ipsum officiis qui nihil aut incidunt aut</p>
+                <p class="card-text">Vår empati som målvaktstränare innebär att vi förstår och tar hänsyn till de individuella behoven och känslorna hos varje målvakt på laget. Vi är medvetna om att det kan vara svårt att hantera press och motgångar på positionen som målvakt och att varje målvakt har en unik personlighet och bakgrund. Vi är lyhörda för varje målvakts behov och strävar efter att skapa en trygg och stödjande miljö där de kan känna sig bekväma att uttrycka sina känslor och problem. Vi använder vår empati för att coacha varje målvakt individuellt och hjälpa dem att övervinna eventuella hinder som hindrar dem från att uppnå sin fulla potential.</p>
                 <div class="read-more">
                   <a href="#">
                     <i class="bi bi-arrow-right"></i> Läs Mer </a>
@@ -177,7 +177,7 @@
       <div class="container">
         <div class="section-title">
           <h2>Priser</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>Goalie är stolta över att erbjuda våra kunder högkvalitativa produkter och tjänster till konkurrenskraftiga priser.</p>
         </div>
         <div class="row no-gutters">
           <div class="col-lg-4 box">
@@ -186,21 +186,18 @@
             </h4>
             <ul>
               <li>
-                <i class="bx bx-check"></i> Quam adipiscing vitae proin
+                <i class="bx bx-check"></i> Tutorials
               </li>
               <li>
-                <i class="bx bx-check"></i> Nec feugiat nisl pretium
-              </li>
-              <li>
-                <i class="bx bx-check"></i> Nulla at volutpat diam uteera
+                <i class="bx bx-check"></i> Utveckling
               </li>
               <li class="na">
                 <i class="bx bx-x"></i>
-                <span>Pharetra massa massa ultricies</span>
+                <span>Personlig coaching</span>
               </li>
               <li class="na">
                 <i class="bx bx-x"></i>
-                <span>Massa ultricies mi quis hendrerit</span>
+                <span>Uppdaterar kontinuerligt</span>
               </li>
             </ul>
             <a href="#" class="get-started-btn">KÖP</a>
@@ -211,19 +208,16 @@
             </h4>
             <ul>
               <li>
-                <i class="bx bx-check"></i> Quam adipiscing vitae proin
+                <i class="bx bx-check"></i> Tutorials
               </li>
               <li>
-                <i class="bx bx-check"></i> Nec feugiat nisl pretium
+                <i class="bx bx-check"></i> Utveckling
               </li>
               <li>
-                <i class="bx bx-check"></i> Nulla at volutpat diam uteera
+                <i class="bx bx-check"></i> Personlig coaching
               </li>
               <li>
-                <i class="bx bx-check"></i> Pharetra massa massa ultricies
-              </li>
-              <li>
-                <i class="bx bx-check"></i> Massa ultricies mi quis hendrerit
+                <i class="bx bx-check"></i> Uppdaterar kontinuerligt
               </li>
             </ul>
             <a href="#" class="get-started-btn">KÖP</a>
@@ -234,19 +228,16 @@
             </h4>
             <ul>
               <li>
-                <i class="bx bx-check"></i> Quam adipiscing vitae proin
+                <i class="bx bx-check"></i> Tutorials
               </li>
               <li>
-                <i class="bx bx-check"></i> Nec feugiat nisl pretium
+                <i class="bx bx-check"></i> Utveckling
               </li>
               <li>
-                <i class="bx bx-check"></i> Nulla at volutpat diam uteera
+                <i class="bx bx-check"></i> Personlig coaching
               </li>
               <li>
-                <i class="bx bx-check"></i> Pharetra massa massa ultricies
-              </li>
-              <li>
-                <i class="bx bx-check"></i> Massa ultricies mi quis hendrerit
+                <i class="bx bx-check"></i> Uppdaterar kontinuerligt
               </li>
             </ul>
             <a href="#" class="get-started-btn">KÖP</a>
@@ -256,7 +247,7 @@
     </section>
   </main>
   <?php
-  $pages = array('includes/footer.php', 'includes/backtotop.php', 'includes/modal.php', 'includes/javascriptlinks.php');
+  $pages = array('includes/footer.php', 'includes/backtotop.php', 'includes/modal.php', 'includes/logout.php', 'includes/javascriptlinks.php');
     foreach ($pages as $page) {
       include_once $page;
     }

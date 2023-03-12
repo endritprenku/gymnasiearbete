@@ -21,7 +21,7 @@
               echo '<li class="dropdown"><a href="#">Mitt Konto</a>
               <ul>
                 <li><a href="kategorier">Våra Kategorier</a></li>
-                <li><a href="loggaut">Logga Ut</a></li>
+                <li><a type="button" data-bs-toggle="modal" data-bs-target="#logoutModal" href="#">Logga Ut</a></li>
               </ul>
             </li>';
           } else {
@@ -39,7 +39,7 @@
     <section class="breadcrumbs">
       <div class="container">
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Vårt Team</h2>
+          <h2>Vårt Team <i class="fa fa-users" aria-hidden="true"></i></h2>
           <ol>
             <li>
               <a href="index">Hem</a>
@@ -86,7 +86,7 @@
     </section>
   </main>
   <?php
-  $pages = array('includes/footer.php', 'includes/backtotop.php', 'includes/modal.php', 'includes/javascriptlinks.php');
+  $pages = array('includes/footer.php', 'includes/backtotop.php', 'includes/modal.php', 'includes/logout.php', 'includes/javascriptlinks.php');
     foreach ($pages as $page) {
       include_once $page;
     }

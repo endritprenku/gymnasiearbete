@@ -1282,7 +1282,9 @@ section {
 
 #category .card-img-tiles .main-img>img {
   display: block;
-  width: 100%
+  width: 100%;
+  border-style: double;
+  border-color: black;
 }
 
 #category .mb-grid-gutter {
