@@ -160,7 +160,7 @@
               </div>
               <div class="card-body">
                 <h5 class="card-title">
-                  <a href="#">Vår Empati</a>
+                  <a href="#">För Individen</a>
                 </h5>
                 <p class="card-text">Vår empati som målvaktstränare innebär att vi förstår och tar hänsyn till de individuella behoven och känslorna hos varje målvakt på laget. Vi är medvetna om att det kan vara svårt att hantera press och motgångar på positionen som målvakt och att varje målvakt har en unik personlighet och bakgrund. Vi är lyhörda för varje målvakts behov och strävar efter att skapa en trygg och stödjande miljö där de kan känna sig bekväma att uttrycka sina känslor och problem. Vi använder vår empati för att coacha varje målvakt individuellt och hjälpa dem att övervinna eventuella hinder som hindrar dem från att uppnå sin fulla potential.</p>
                 <div class="read-more">
@@ -247,7 +247,7 @@
     </section>
   </main>
   <?php
-  $pages = array('includes/footer.php', 'includes/backtotop.php', 'includes/modal.php', 'includes/logout.php', 'includes/javascriptlinks.php');
+  $pages = array('includes/footer.php', 'includes/backtotop.php', 'includes/login.php', 'includes/logout.php', 'includes/javascriptlinks.php');
     foreach ($pages as $page) {
       include_once $page;
     }

@@ -78,7 +78,7 @@
     </section>
   </main>
   <?php
-  $pages = array('includes/footer.php', 'includes/backtotop.php', 'includes/modal.php', 'includes/logout.php');
+  $pages = array('includes/footer.php', 'includes/backtotop.php', 'includes/login.php', 'includes/logout.php');
     foreach ($pages as $page) {
       include_once $page;
     }
